@@ -1,0 +1,16 @@
+@media (max-width: 321px) {
+  
+	#fb-icon, #twitter-icon, #youtube-icon, #soundcloud-icon {
+		height: 16px;
+		width: 16px;
+		margin-left: 35px;
+
+	}
+
+	#instagram-icon, #spotify-icon {
+		height: 12px;
+		width: 12px;
+		margin-left: 35px;
+	}
+
+}
