@@ -10,6 +10,7 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon" href="apple-touch-icon.png">
+        <link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
         <link href='https://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
         <link rel="stylesheet" href="css/bootstrap.min.css">
         <link rel="stylesheet" href="css/bootstrap-theme.min.css">
@@ -29,13 +30,9 @@
             <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
 
-        <!--Add email function for Sign Up-->
-        <!--Use Bootstraps Grid System for stacking upon each other-->
-        <!--Use Modals for menu items-->
-        <!--Make a Content box for content on page-->
-
     <div id="navbar">
-        
+  
+    <div class="wrapper">      
     <span id="social-icons">
             <a href="https://www.facebook.com/TheFridayProphets" target="_blank">
                 <img src="img/facebook.png" id="fb-icon"></img>
@@ -60,23 +57,24 @@
 
 
     <div id="links" class="animsition center">
-        <button type="button" id="about-btn" data-toggle="modal" data-target="#myModal">About</button></br></br>
-        <button type="button" id="signup-btn">Sign up!</button></br></br>
+        <button type="button" id="about-btn" class="one-edge-shadow" data-toggle="modal" data-target="#modalAbout">About</button>
+        </br></br>
+        <button type="button" id="signup-btn" class="one-edge-shadow" data-toggle="modal" data-target="#modalEmail">Sign up!</button></br></br>
         <a href="https://thefridayprophets.bandcamp.com/" target="_blank">
-            <button type="button" id="listen-btn">Listen</button></br></br>
+            <button type="button" id="listen-btn" class="one-edge-shadow">Listen</button></br></br>
         </a>
     </div>
 
-    <form class="center" style="display: none">
+    <!--<form class="center">
         <input type="text" name="FirstName" value="Your E-mail"><br>
         <input type="text" name="LastName" value="City"><br>
         <input type="text" name="fff" value="Name"><br>
         <input class="btn sign-up-btn" type="submit" value="Submit">
-    </form>
+    </form>-->
+    </div>
 
-
-    <!-- Modal -->
-    <div id="myModal" class="modal fade" role="dialog">
+    <!-- Modal About -->
+    <div id="modalAbout" class="modal fade" role="dialog">
       <div class="modal-dialog">
 
         <!-- Modal content-->
@@ -86,11 +84,41 @@
             <h4 class="modal-title">Biography</h4>
           </div>
           <div class="modal-body">
-            <p>Starting out in 2010 the main goal of the band was to write and play party oriented punk rock and just have fun with it. Founding the band on this philosophy the boys agreed upon the name The Friday Prophets. With the train was in motion the song-writing began, and the first song that was finished was baptized with the name Punk Rock Flu. A song that without a doubt lived up to the party punk building blocks, but as more songs came along the artistic and creative scope broadened. Fourteen songs later, the band had finished their first full-length album, Bits & Pieces which was released in Novemeber 2013. The album has the sound of the fast and melodic 90' punk rock era. In the era when Green released Dookie, NOFX put out Punk in Drublic and The Offspring dropped Smash. It's safe to say that these albums are all big influences and has helped shaped the bands creative output. Just like these bands mentioned the music is melody driven and the lyrics scrutinizes any aspect of life which seem important to write about at the moment. But the influences go way beyond music and can come in any shape and form, from everything from books, articles, poetry, science, personal relationships and a whole lot of self-reflection and more. 
-            
-            The guys in the band loves playing shows, seeing new places and meeting new faces. And beer of course. 
+            <p>
+            Starting out in 2010 the main goal of the band was to write and play party oriented punk rock
+            and just have fun with it. Founding the band upon this philosophy the boys agreed on the name The Friday Prophets. With the train in motion the song-writing began, and the first song that came to form was titled Punk Rock Flu, a song that without a doubt expressed the bands party punk building blocks. As more songs came along the artistic and creative scope began broadening, and fourteen melodies later the first full-length album was done/finished. It was named Bits & Pieces and (was) released in November 2013. The album has the sound of the fast and melodic 90's punk rock era, when Green Day released Dookie, Bad Religion put out Stranger Than Fiction and The Offspring dropped Smash. It's safe to say that these albums mentioned definitely has been big influences and has helped shaped The Friday Prophets creative output. The influences however, goes way beyond that of music and the band takes their inspiration from everything from books, articles, poetry, science, personal relationships, self-reflection and more. A lot of emphasis is placed on writing purposeful lyricism, lyrics that scrutinizes both narrow and grand aspects of life, whatever the subject may concern. The Friday Prophets is currently working mostly with a/an? DIY approach and the guys aim is to get out and play shows, seeing new places and meeting new faces. If you want to get involved in anyway you'll reach the band on their social media platforms or at thefridayprophets@gmail.com.
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+          </div>
+        </div>
 
-             </p>
+      </div>
+    </div>
+
+     <!-- Modal Email -->
+    <div id="modalEmail" class="modal fade" role="dialog">
+      <div class="modal-dialog">
+
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title">Sign up!</h4>
+          </div>
+          <div class="modal-body">
+            
+            <form class="center">
+                <label for="firstName">First name:</label>
+                <input type="text" name="FirstName" id="firstName" value="Your E-mail">
+                <label for="lastName">Last name:</label>
+                <input type="text" name="LastName" value="City">
+                <label for="email">Your E-mail:</label>
+                <input type="text" name="fff" value="Name"></br>
+                <input class="btn sign-up-btn" type="submit" value="Submit">
+            </form>
+            
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
@@ -119,42 +147,6 @@
             e.src='//www.google-analytics.com/analytics.js';
             r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
             ga('create','UA-XXXXX-X','auto');ga('send','pageview');
-
-            if ($(window).width() < 321) {
-                $(function() {
-                    $('body').vegas({
-                      slides: [
-                        { src: 'img/socialwreck.jpg' },
-                      ]
-                    });
-                });
-            }
-            else {
-            $(function() {
-                $('body').vegas({
-                  slides: [
-                    { src: 'img/jojo2.jpg' },
-                  ]
-                });
-            });
-            }
-
-            /*$(function() {
-                $('body').vegas({
-                  slides: [
-                    { src: 'img/jojo2.jpg' },
-                  ]
-                });
-            });*/
-
-            $(".animsition").animsition({
-              inClass: 'fade-in-down-lg',
-              outClass: 'fade-out-down-lg',
-              inDuration: 1000,
-              outDuration: 500
-            });
-
-
 
         </script>
     </body>
